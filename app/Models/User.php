@@ -17,6 +17,9 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'id_level',
+        'id_majore',
+        'more_majores',
         'name',
         'email',
         'password',
@@ -42,6 +45,7 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'more_majores' => 'array',
         ];
     }
 }
